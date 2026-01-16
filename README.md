@@ -1,142 +1,135 @@
 <div align="center">
 
-# 大模型相似性指标计算工具
+# A Meta-Predictor Framework for Proactive Defense Against Transferable Jailbreak Attacks in Large Language Models
 
-此工具用于计算不同大模型之间的相似性指标，支持对3*5个大模型的组合分别计算15组指标，并将每一类别的指标结果统一记录在一起。
+This framework is used to quickly predict similarity metrics between different large models to defend against transferable jailbreak attacks in large language models. It supports calculating 15 sets of metrics for combinations of 3 source models and 5 target models respectively, and uniformly records the metric results of each category together.
 
-## 工具概述
+## Framework Overview
 
-本工具包含两个主要的Python脚本：
+It contains two main Python scripts:
 
-1. **model_similarity_analysis.py** - 完整版本，实现了所有三类相似性指标的计算，提供详细的可视化和报告生成功能
-2. **test_model_similarity.py** - 测试脚本，用于验证主要功能是否正常工作
+1. **model_similarity_analysis.py** - The full version, which implements the calculation of all three types of similarity metrics and provides detailed visualization and report generation functions.
+2. **test_model_similarity.py** - A test script used to verify whether the main functions work properly.
 
-## 相似性指标类别
+## Categories of Similarity Metrics
 
-根据文档，相似性指标分为以下三类：
+According to the documentation, the similarity metrics are divided into the following three categories:
 
-### 1. 输出分布相似性指标
-- KL散度 (KL Divergence)：衡量一个模型的输出分布相对于另一个模型的差异程度
-- Jensen-Shannon散度 (Jensen-Shannon Divergence, JSD)：KL的对称、平滑版本，取值范围[0,1]
-- Earth Mover's Distance (EMD)：将一个分布变成另一个分布的最小"搬运成本"
-- Logits余弦相似度：测量输出向量夹角，简单且与尺度无关
-- RBO (Rank-Based Overlap)：测量排名前k个token的重合程度
+### 1. Output Distribution Similarity Metrics
+- KL Divergence: Measures the degree of difference between the output distribution of one model and that of another model.
+- Jensen-Shannon Divergence (JSD): A symmetric and smoothed version of KL, with a value range of [0,1].
+- Earth Mover's Distance (EMD): The minimum "transportation cost" to transform one distribution into another.
+- Logits Cosine Similarity: Measures the angle between output vectors, which is simple and scale-independent.
+- RBO (Rank-Based Overlap): Measures the degree of overlap between the top k tokens.
 
-### 2. 表征空间相似性指标
-- Centered Kernel Alignment (CKA)：比较两组嵌入表示之间的相似性
-- SVCCA (Singular Value Canonical Correlation Analysis)：找到两个表示空间中高度相关的子空间
-- PWCCA (Weighted SVCCA)：对SVCCA加权，强调重要方向
-- RSA (Representational Similarity Analysis)：比较嵌入空间中样本两两之间的距离模式
+### 2. Representation Space Similarity Metrics
+- Centered Kernel Alignment (CKA): Compares the similarity between two sets of embedding representations.
+- SVCCA (Singular Value Canonical Correlation Analysis): Finds highly correlated subspaces in two representation spaces.
+- PWCCA (Weighted SVCCA): weights SVCCA to emphasize important directions.
+- RSA (Representational Similarity Analysis): Compares the distance patterns between pairs of samples in the embedding space.
 
-### 3. 行为/功能相似性指标
-- 任务一致率：两个模型在相同输入下top-1输出相同的比例
-- Pass@k一致率：两个模型在top-k输出中同时包含正确/目标答案的概率
-- 对抗迁移率：针对模型A的jailbreak提示在模型B上也成功的比例
-- 语义相似性：用句向量计算两个模型输出的语义余弦相似性
+### 3. Behavioral/Functional Similarity Metrics
+- Task Consistency Rate: The proportion of cases where the two models have the same top-1 output for the same input.
+- Pass@k Consistency Rate: The probability that both models include the correct/target answer in their top-k outputs.
+- Adversarial Transfer Rate: The proportion of cases where a jailbreak prompt targeting model A also succeeds on model B.
+- Semantic Similarity: Calculates the semantic cosine similarity of the outputs of two models using sentence vectors.
 
-## 支持的模型组合
+## Supported Model Combinations
 
-工具支持计算以下3个源模型与5个目标模型的15种组合：
+The tool supports calculating 15 combinations of the following 3 source models and 5 target models:
 
-**源模型：**
+**Source Models:**
 - llama2-7b
 - bert-large
 - roberta-large
 
-**目标模型：**
+**Target Models:**
 - mistral-7b
 - vicuna-7b
 - guanaco-7b
 - starling-7b
 - chatgpt-3.5
 
-## 使用方法
+## Usage Methods
 
-### 环境要求
+### Environment Requirements
 
-- Python 3.6+（推荐3.8+）
-- 必要的Python库：numpy, matplotlib
+- Python 3.6+ (3.8+ recommended)
+- Required Python libraries: numpy, matplotlib
 
-可以使用以下命令安装必要的库：
+You can install the necessary libraries using the following command:
 
 ```bash
 pip install numpy matplotlib
 ```
 
-### 运行脚本
+### Running the Scripts
 
-#### 运行完整的15组模型对计算
+#### Running the Complete Calculation for 15 Model Pairs
 
 ```bash
 python model_similarity_analysis.py
 ```
 
-#### 运行测试脚本
+#### Running the Test Script
 
-如果您想先测试功能而不运行完整计算：
+If you want to test the functionality first without running the complete calculation:
 
 ```bash
 python test_model_similarity.py
 ```
 
-## 输出结果
+## Output Results
 
-### 完整计算输出
+### Complete Calculation Output
 
-运行完整版本后，将在当前目录下创建一个名为`similarity_analysis_results`的文件夹，包含以下内容：
+After running the full version, a folder named `similarity_analysis_results` will be created in the current directory, containing the following contents:
 
-1. **JSON格式结果文件**：包含所有指标的详细计算结果
-2. **分类结果文件**：按指标类别（输出分布、表征空间、行为/功能）分别保存结果，每一类别的指标结果统一记录在一起
-3. **可视化图表**：各类指标的热力图，直观展示不同模型对之间的相似性
-4. **总结报告**：包含计算时间、模型信息、各类指标的统计摘要等
+1. **JSON format result files**: Containing detailed calculation results of all metrics.
+2. **Classification result files**: Results are saved separately by metric category (output distribution, representation space, behavioral/functional), and the metric results of each category are uniformly recorded together.
+3. **Visualization charts**: Heatmaps of various metrics to intuitively show the similarity between different model pairs.
+4. **Summary report**: Including calculation time, model information, statistical summaries of various metrics, etc.
 
-### 测试脚本输出
+### Test Script Output
 
-运行测试脚本后，将在当前目录下创建一个名为`test_similarity_results`的文件夹，包含单对模型的计算结果，用于验证功能是否正常。
+After running the test script, a folder named `test_similarity_results` will be created in the current directory, containing the calculation results of a single pair of models, which is used to verify whether the functionality is normal.
 
-## 脚本功能详解
+## Detailed Explanation of Script Functions
 
-### model_similarity_analysis.py 主要功能
+### Main Functions of model_similarity_analysis.py
 
-- **数据生成**：生成模拟的模型输出概率分布、logits、隐藏层表示等数据
-- **指标计算**：实现所有三类共12种相似性指标的计算
-- **结果保存**：将结果保存为JSON格式，按指标类别分别记录
-- **可视化**：创建热力图，直观展示计算结果
-- **报告生成**：生成详细的总结报告，包含各类指标的统计信息
+- **Data Generation**: Generates simulated data such as model output probability distributions, logits, and hidden layer representations.
+- **Metric Calculation**: Implements the calculation of 12 similarity metrics in all three categories.
+- **Result Saving**: Saves results in JSON format, recorded separately by metric category.
+- **Visualization**: Creates heatmaps to intuitively display calculation results.
+- **Report Generation**: Generates a detailed summary report containing statistical information of various metrics.
 
-### test_model_similarity.py 主要功能
+### Main Functions of test_model_similarity.py
 
-- **实例验证**：验证ModelSimilarityAnalysis类能否正确初始化
-- **模型列表验证**：检查源模型和目标模型的配置是否正确
-- **单对计算测试**：测试计算一对模型的指标功能是否正常
-- **结果结构检查**：验证计算结果的数据结构是否符合预期
-- **结果保存测试**：测试结果保存功能是否正常
+- **Instance Verification**: Verifies whether the ModelSimilarityAnalysis class can be initialized correctly.
+- **Model List Verification**: Checks whether the configuration of source models and target models is correct.
+- **Single Pair Calculation Test**: Tests whether the function of calculating metrics for a pair of models works properly.
+- **Result Structure Check**: Verifies whether the data structure of the calculation results meets expectations.
+- **Result Saving Test**: Tests whether the result saving function works properly.
 
-## 自定义配置
+## Custom Configuration
 
-### 调整模型列表
+### Adjusting the Model List
 
-如果需要调整源模型或目标模型列表，可以修改脚本中的以下部分：
+If you need to adjust the list of source models or target models, you can modify the following parts in the script:
 
 ```python
-# 源模型列表
+# Source model list
 source_models = ['llama2-7b', 'bert-large', 'roberta-large']
-# 目标模型列表
+# Target model list
 target_models = ['mistral-7b', 'vicuna-7b', 'guanaco-7b', 'starling-7b', 'chatgpt-3.5']
 ```
 
-### 调整输出目录
+### Adjusting the Output Directory
 
-可以通过修改初始化参数来自定义输出目录：
+You can customize the output directory by modifying the initialization parameters:
 
 ```python
-# 修改输出目录
+# Modify the output directory
 metrics_calculator = ModelSimilarityAnalysis(output_dir="./custom_results")
 ```
-
-## 注意事项
-
-1. 本工具生成的是模拟数据，实际应用中应替换为真实模型的输出数据
-2. 对于对抗迁移率和语义相似性等指标，在实际应用中需要基于真实的模型输出和评估方法
-3. 计算大量模型对时，部分指标（如EMD、SVCCA等）可能会消耗较多计算资源
-
