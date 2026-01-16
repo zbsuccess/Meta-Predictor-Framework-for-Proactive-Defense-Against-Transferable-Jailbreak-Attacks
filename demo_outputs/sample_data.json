@@ -1,0 +1,129 @@
+{
+  "data": [
+    {
+      "source_model": "bert-large",
+      "target_model": "mistral-7b",
+      "ASR": 0.76,
+      "AHS": 0.74,
+      "Average Queries": 198,
+      "Average Time": 9.6
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "vicuna-7b",
+      "ASR": 0.704,
+      "AHS": 0.343,
+      "Average Queries": 196,
+      "Average Time": 8.6
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "guanaco-7b",
+      "ASR": 0.378,
+      "AHS": 0.487,
+      "Average Queries": 134,
+      "Average Time": 22.3
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "starling-7b",
+      "ASR": 0.447,
+      "AHS": 0.591,
+      "Average Queries": 129,
+      "Average Time": 12.8
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "chatgpt-3.5",
+      "ASR": 0.396,
+      "AHS": 0.757,
+      "Average Queries": 52,
+      "Average Time": 28.6
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "mistral-7b",
+      "ASR": 0.194,
+      "AHS": 0.792,
+      "Average Queries": 117,
+      "Average Time": 8.9
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "vicuna-7b",
+      "ASR": 0.585,
+      "AHS": 0.539,
+      "Average Queries": 72,
+      "Average Time": 6.8
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "guanaco-7b",
+      "ASR": 0.344,
+      "AHS": 0.25,
+      "Average Queries": 140,
+      "Average Time": 26.5
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "starling-7b",
+      "ASR": 0.634,
+      "AHS": 0.31,
+      "Average Queries": 63,
+      "Average Time": 28.0
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "chatgpt-3.5",
+      "ASR": 0.469,
+      "AHS": 0.392,
+      "Average Queries": 148,
+      "Average Time": 15.4
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "ASR": 0.442,
+      "AHS": 0.706,
+      "Average Queries": 190,
+      "Average Time": 21.7
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "vicuna-7b",
+      "ASR": 0.221,
+      "AHS": 0.297,
+      "Average Queries": 84,
+      "Average Time": 5.8
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "guanaco-7b",
+      "ASR": 0.708,
+      "AHS": 0.394,
+      "Average Queries": 138,
+      "Average Time": 17.0
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "starling-7b",
+      "ASR": 0.355,
+      "AHS": 0.211,
+      "Average Queries": 139,
+      "Average Time": 9.3
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "chatgpt-3.5",
+      "ASR": 0.107,
+      "AHS": 0.775,
+      "Average Queries": 138,
+      "Average Time": 17.9
+    }
+  ],
+  "summary": {
+    "total_tests": 15,
+    "average_asr": 0.45,
+    "average_ahs": 0.506
+  }
+}

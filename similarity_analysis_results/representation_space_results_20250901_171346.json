@@ -1,0 +1,122 @@
+[
+  {
+    "source_model": "llama2-7b",
+    "target_model": "mistral-7b",
+    "CKA": 0.8897325101903439,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0,
+    "RSA": 0.8891495297066844
+  },
+  {
+    "source_model": "llama2-7b",
+    "target_model": "vicuna-7b",
+    "CKA": 0.8871664232095868,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0,
+    "RSA": 0.8868854927562844
+  },
+  {
+    "source_model": "llama2-7b",
+    "target_model": "guanaco-7b",
+    "CKA": 0.8902878332254358,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0,
+    "RSA": 0.8903036636674523
+  },
+  {
+    "source_model": "llama2-7b",
+    "target_model": "starling-7b",
+    "CKA": 0.8848468986935857,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0,
+    "RSA": 0.8844204555943437
+  },
+  {
+    "source_model": "llama2-7b",
+    "target_model": "chatgpt-3.5",
+    "CKA": 0.8851806973720232,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0000000000000002,
+    "RSA": 0.8846009024061582
+  },
+  {
+    "source_model": "bert-large",
+    "target_model": "mistral-7b",
+    "CKA": 0.886300723902693,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0,
+    "RSA": 0.886563697772259
+  },
+  {
+    "source_model": "bert-large",
+    "target_model": "vicuna-7b",
+    "CKA": 0.8896731144218974,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0,
+    "RSA": 0.8895304794366116
+  },
+  {
+    "source_model": "bert-large",
+    "target_model": "guanaco-7b",
+    "CKA": 0.8933728924801272,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0,
+    "RSA": 0.8931979638835332
+  },
+  {
+    "source_model": "bert-large",
+    "target_model": "starling-7b",
+    "CKA": 0.8895139289786587,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0000000000000002,
+    "RSA": 0.8894475654607606
+  },
+  {
+    "source_model": "bert-large",
+    "target_model": "chatgpt-3.5",
+    "CKA": 0.8834846730498724,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0,
+    "RSA": 0.883136100631441
+  },
+  {
+    "source_model": "roberta-large",
+    "target_model": "mistral-7b",
+    "CKA": 0.886915770653633,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0,
+    "RSA": 0.886683639531214
+  },
+  {
+    "source_model": "roberta-large",
+    "target_model": "vicuna-7b",
+    "CKA": 0.8899106529675713,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0,
+    "RSA": 0.8897848696134499
+  },
+  {
+    "source_model": "roberta-large",
+    "target_model": "guanaco-7b",
+    "CKA": 0.8912167257639225,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0,
+    "RSA": 0.8915259873400104
+  },
+  {
+    "source_model": "roberta-large",
+    "target_model": "starling-7b",
+    "CKA": 0.8882888285007521,
+    "SVCCA": 1.0000000000000002,
+    "PWCCA": 1.0000000000000002,
+    "RSA": 0.888524209817765
+  },
+  {
+    "source_model": "roberta-large",
+    "target_model": "chatgpt-3.5",
+    "CKA": 0.8858729083636883,
+    "SVCCA": 1.0,
+    "PWCCA": 1.0,
+    "RSA": 0.8860524777872882
+  }
+]

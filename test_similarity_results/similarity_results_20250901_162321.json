@@ -1,0 +1,33 @@
+{
+  "output_distribution": [
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "KL散度": 0.01421373450544175,
+      "JS散度": 0.003536550494440807,
+      "EMD": 3.891616264279259,
+      "Logits余弦相似度": 0.7902702630747513,
+      "RBO": 0.5598131165871431
+    }
+  ],
+  "representation_space": [
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "CKA": 0.8856547670910417,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0000000000000002,
+      "RSA": 0.8846623310892417
+    }
+  ],
+  "behavior_functional": [
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "任务一致率": 0.81,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.30009889652060506,
+      "语义相似性": 0.3729561666357259
+    }
+  ]
+}

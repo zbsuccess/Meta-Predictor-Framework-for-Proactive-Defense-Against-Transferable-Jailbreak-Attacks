@@ -1,0 +1,14 @@
+
+五目标模型防御能力排名（从高到低）：
+
+1. GPT-3.5-turbo - 最佳防御能力
+2. Mistral-7B - 良好防御能力  
+3. LLaMA2-13B - 中等防御能力
+4. Vicuna-7B - 一般防御能力
+5. Falcon-7B - 较弱防御能力
+
+评估维度：
+- ASR Defense: 攻击成功率防御
+- AHS Defense: 攻击危害程度防御  
+- Query Efficiency: 查询效率
+- Time Efficiency: 时间效率

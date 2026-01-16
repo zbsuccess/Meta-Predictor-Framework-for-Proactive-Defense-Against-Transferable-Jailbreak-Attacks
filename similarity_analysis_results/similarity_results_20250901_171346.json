@@ -1,0 +1,383 @@
+{
+  "output_distribution": [
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "KL散度": 0.012837947599598967,
+      "JS散度": 0.003197308439200452,
+      "EMD": 1.5762304373195395,
+      "Logits余弦相似度": 0.7844298708762997,
+      "RBO": 0.6082214211771431
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "vicuna-7b",
+      "KL散度": 0.01315078256210973,
+      "JS散度": 0.00328316909601291,
+      "EMD": 2.357724897808531,
+      "Logits余弦相似度": 0.9266849139431422,
+      "RBO": 0.9997885694442861
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "guanaco-7b",
+      "KL散度": 0.012815580711585745,
+      "JS散度": 0.0031874510523507175,
+      "EMD": 1.0517423685587861,
+      "Logits余弦相似度": 0.4782517122351863,
+      "RBO": 1.997253259444286
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "starling-7b",
+      "KL散度": 0.013093286169407992,
+      "JS散度": 0.003260531108033124,
+      "EMD": 1.2821658611441087,
+      "Logits余弦相似度": 0.3987298589137871,
+      "RBO": 1.9636255148014292
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "chatgpt-3.5",
+      "KL散度": 0.01235168952122129,
+      "JS散度": 0.0030808028840844195,
+      "EMD": 2.268021133295302,
+      "Logits余弦相似度": 0.41226697244530897,
+      "RBO": 2.1586749906214293
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "mistral-7b",
+      "KL散度": 0.014046787576214219,
+      "JS散度": 0.003496993453826858,
+      "EMD": 2.9619068763560863,
+      "Logits余弦相似度": 0.7468057624949875,
+      "RBO": 0.404366624087143
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "vicuna-7b",
+      "KL散度": 0.014875204005575942,
+      "JS散度": 0.003699716010974327,
+      "EMD": 2.2224156627030625,
+      "Logits余弦相似度": 0.9152030739467285,
+      "RBO": 1.584406793121429
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "guanaco-7b",
+      "KL散度": 0.013403855689208426,
+      "JS散度": 0.0033430898311119063,
+      "EMD": 1.7974875664799002,
+      "Logits余弦相似度": 0.4637611074476688,
+      "RBO": 0.0
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "starling-7b",
+      "KL散度": 0.014024917139683738,
+      "JS散度": 0.0034871450172948883,
+      "EMD": 1.944042533904403,
+      "Logits余弦相似度": 0.3957810130874876,
+      "RBO": 2.058063676534286
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "chatgpt-3.5",
+      "KL散度": 0.013786250520192231,
+      "JS散度": 0.003440148733591151,
+      "EMD": 2.147268421789316,
+      "Logits余弦相似度": 0.37181835336763336,
+      "RBO": 0.12143958291000004
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "mistral-7b",
+      "KL散度": 0.012001484034066544,
+      "JS散度": 0.0029890754597905658,
+      "EMD": 2.0438373194677433,
+      "Logits余弦相似度": 0.7703301662320869,
+      "RBO": 0.742641731177143
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "vicuna-7b",
+      "KL散度": 0.012532341200495921,
+      "JS散度": 0.003119721446764324,
+      "EMD": 1.210250378353204,
+      "Logits余弦相似度": 0.9229837314586358,
+      "RBO": 2.7802599906214294
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "guanaco-7b",
+      "KL散度": 0.012512337587706496,
+      "JS散度": 0.0031166527080754066,
+      "EMD": 1.777427005072367,
+      "Logits余弦相似度": 0.5239096669232177,
+      "RBO": 0.743928676534286
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "starling-7b",
+      "KL散度": 0.012811450131938597,
+      "JS散度": 0.0031815915332048484,
+      "EMD": 1.8013488200529555,
+      "Logits余弦相似度": 0.41524324215141506,
+      "RBO": 1.7764372102114292
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "chatgpt-3.5",
+      "KL散度": 0.011835189508629253,
+      "JS散度": 0.0029495145087659966,
+      "EMD": 1.26479058000838,
+      "Logits余弦相似度": 0.41600458039064725,
+      "RBO": 0.0
+    }
+  ],
+  "representation_space": [
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "CKA": 0.8897325101903439,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0,
+      "RSA": 0.8891495297066844
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "vicuna-7b",
+      "CKA": 0.8871664232095868,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0,
+      "RSA": 0.8868854927562844
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "guanaco-7b",
+      "CKA": 0.8902878332254358,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0,
+      "RSA": 0.8903036636674523
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "starling-7b",
+      "CKA": 0.8848468986935857,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0,
+      "RSA": 0.8844204555943437
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "chatgpt-3.5",
+      "CKA": 0.8851806973720232,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0000000000000002,
+      "RSA": 0.8846009024061582
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "mistral-7b",
+      "CKA": 0.886300723902693,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0,
+      "RSA": 0.886563697772259
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "vicuna-7b",
+      "CKA": 0.8896731144218974,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0,
+      "RSA": 0.8895304794366116
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "guanaco-7b",
+      "CKA": 0.8933728924801272,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0,
+      "RSA": 0.8931979638835332
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "starling-7b",
+      "CKA": 0.8895139289786587,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0000000000000002,
+      "RSA": 0.8894475654607606
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "chatgpt-3.5",
+      "CKA": 0.8834846730498724,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0,
+      "RSA": 0.883136100631441
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "mistral-7b",
+      "CKA": 0.886915770653633,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0,
+      "RSA": 0.886683639531214
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "vicuna-7b",
+      "CKA": 0.8899106529675713,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0,
+      "RSA": 0.8897848696134499
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "guanaco-7b",
+      "CKA": 0.8912167257639225,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0,
+      "RSA": 0.8915259873400104
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "starling-7b",
+      "CKA": 0.8882888285007521,
+      "SVCCA": 1.0000000000000002,
+      "PWCCA": 1.0000000000000002,
+      "RSA": 0.888524209817765
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "chatgpt-3.5",
+      "CKA": 0.8858729083636883,
+      "SVCCA": 1.0,
+      "PWCCA": 1.0,
+      "RSA": 0.8860524777872882
+    }
+  ],
+  "behavior_functional": [
+    {
+      "source_model": "llama2-7b",
+      "target_model": "mistral-7b",
+      "任务一致率": 0.8,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.4433811177458453,
+      "语义相似性": 0.5407797184443226
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "vicuna-7b",
+      "任务一致率": 0.88,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.5337040580494622,
+      "语义相似性": 0.33576486685933893
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "guanaco-7b",
+      "任务一致率": 0.59,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.38487699735461117,
+      "语义相似性": 0.34989099175252203
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "starling-7b",
+      "任务一致率": 0.48,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.29504994864063006,
+      "语义相似性": 0.4762409046430702
+    },
+    {
+      "source_model": "llama2-7b",
+      "target_model": "chatgpt-3.5",
+      "任务一致率": 0.71,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.5879646139211526,
+      "语义相似性": 0.4220805962352575
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "mistral-7b",
+      "任务一致率": 0.8,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.3224433408501435,
+      "语义相似性": 0.5152113670169823
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "vicuna-7b",
+      "任务一致率": 0.88,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.2426957256295176,
+      "语义相似性": 0.4451565295182993
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "guanaco-7b",
+      "任务一致率": 0.59,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.3154172974707047,
+      "语义相似性": 0.20283741745827558
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "starling-7b",
+      "任务一致率": 0.48,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.389750806609021,
+      "语义相似性": 0.3773063471871885
+    },
+    {
+      "source_model": "bert-large",
+      "target_model": "chatgpt-3.5",
+      "任务一致率": 0.71,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.41464416474086224,
+      "语义相似性": 0.4557063882751373
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "mistral-7b",
+      "任务一致率": 0.8,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.5467004319847204,
+      "语义相似性": 0.5710816644000917
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "vicuna-7b",
+      "任务一致率": 0.88,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.3208257774053255,
+      "语义相似性": 0.36550814962656797
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "guanaco-7b",
+      "任务一致率": 0.59,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.5440109938942442,
+      "语义相似性": 0.35128764950123725
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "starling-7b",
+      "任务一致率": 0.48,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.30063116179016686,
+      "语义相似性": 0.34023828272266043
+    },
+    {
+      "source_model": "roberta-large",
+      "target_model": "chatgpt-3.5",
+      "任务一致率": 0.71,
+      "Pass@k一致率": 1.0,
+      "对抗迁移率": 0.5399141067744512,
+      "语义相似性": 0.3882091209037543
+    }
+  ]
+}

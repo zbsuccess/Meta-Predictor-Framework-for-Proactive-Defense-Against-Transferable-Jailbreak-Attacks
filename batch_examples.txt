@@ -1,0 +1,16 @@
+# 批量测试示例文件
+# 格式: source_model,target_model
+
+# 基础迁移测试
+bert-large,mistral-7b
+bert-large,vicuna-7b
+llama2-7b,mistral-7b
+llama2-7b,vicuna-7b
+
+# 全面测试
+bert-large,guanaco-7b
+bert-large,starling-7b
+roberta-large,mistral-7b
+roberta-large,vicuna-7b
+llama2-7b,guanaco-7b
+llama2-7b,starling-7b
