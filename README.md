@@ -2,10 +2,18 @@
 
 # A Meta-Predictor Framework for Proactive Defense Against Transferable Jailbreak Attacks in Large Language Models
 
-This framework is used to quickly predict similarity metrics between different large models to defend against transferable jailbreak attacks in large language models. It supports calculating 15 sets of metrics for combinations of 3 source models and 5 target models respectively, and uniformly records the metric results of each category together.
+This repository contains the official implementation of the paper "Meta-Predictor for LLM Jailbreak Transferability Prediction".We propose a novel Meta-Predictor framework that proactively forecasts the transferability of jailbreak attacks across diverse LLMs without requiring expensive red-teaming simulations. By synergizing representational alignment (Hidden States) and distributional divergence (Output Probabilities), our framework achieves robust predictive fidelity ($R^2=0.82$) across heterogeneous model pairs.
+🚀 Core Features
+Proactive Risk Assessment: Decouples risk evaluation from the execution of actual attacks.
 
+Multi-Dimensional Feature Fusion:
+
+Representational Features: CKA (Centered Kernel Alignment), PWCCA (Projection Weighted Canonical Correlation Analysis).
+
+Distributional Features: JSD (Jensen-Shannon Divergence), EMD (Earth Mover's Distance).
+
+High Efficiency: Uses lightweight XGBoost regression instead of heavy optimization-based attack iterations.
 ## Framework Overview
-
 It contains two main Python scripts:
 
 1. **model_similarity_analysis.py** - The full version, which implements the calculation of all three types of similarity metrics and provides detailed visualization and report generation functions.
@@ -28,15 +36,15 @@ According to the documentation, the similarity metrics are divided into the foll
 - PWCCA (Weighted SVCCA): weights SVCCA to emphasize important directions.
 - RSA (Representational Similarity Analysis): Compares the distance patterns between pairs of samples in the embedding space.
 
-### 3. Behavioral/Functional Similarity Metrics
+### 3. Behavioral Similarity Metrics
 - Task Consistency Rate: The proportion of cases where the two models have the same top-1 output for the same input.
 - Pass@k Consistency Rate: The probability that both models include the correct/target answer in their top-k outputs.
 - Adversarial Transfer Rate: The proportion of cases where a jailbreak prompt targeting model A also succeeds on model B.
 - Semantic Similarity: Calculates the semantic cosine similarity of the outputs of two models using sentence vectors.
 
-## Supported Model Combinations
+## Experimental Model Combinations
 
-The tool supports calculating 15 combinations of the following 3 source models and 5 target models:
+Our Experiments supports calculating 15 combinations of the following 3 source models and 5 target models:
 
 **Source Models:**
 - llama2-7b
